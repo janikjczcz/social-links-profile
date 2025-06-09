@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [will-add-later](#)
+- Solution URL: [Social links profile solution](https://www.frontendmentor.io/solutions/social-links-profile-solution-38U7lHVHx4)
 - Live Site URL: [https://janikjczcz.github.io/social-links-profile](https://janikjczcz.github.io/social-links-profile)
 
 ## My process
