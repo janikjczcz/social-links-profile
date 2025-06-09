@@ -1,0 +1,135 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-VariableFont.ttf") format("ttf");
+}
+
+:root {
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+  --font-family: "Inter", sans-serif;
+  --font-title: 700 2.4rem/1.5 var(--font-family);
+  --font-regular: 1.4rem/1.5 var(--font-family);
+  --font-bold: 600 1.4rem/1.5 var(--font-family);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--grey-900);
+  color: var(--white);
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+  max-width: 38.4rem;
+  width: 100%;
+  margin: auto;
+  padding: clamp(2.4rem, 1.53vw + 1.911rem, 4rem);
+  border-radius: 1.2rem;
+  font: var(--font-regular);
+  background-color: var(--grey-800);
+  color: var(--white);
+
+  .profile-pic {
+    width: 8.8rem;
+    height: 8.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .name-location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .4rem;
+
+    .title {
+      font: var(--font-title);
+    }
+
+    .location {
+        font: var(--font-bold);
+        color: var(--green);
+    }
+  }
+
+  .bio::before {content: '" ';}
+  .bio::after {content: ' "';}
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    
+    .button{
+        font: var(--font-bold);
+        color: var(--white);
+        text-decoration: none;
+        padding: 1.2rem;
+        background-color: var(--grey-700);
+        width: 100%;
+        border-radius: .8rem;
+        transition: .5s;
+
+        &:hover, &:focus {
+            color: var(--grey-700);
+            background-color: var(--green);
+        }
+    }
+  }
+}
+
+.attribution {
+  width: 100%;
+  font: var(--font-regular);
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--white);
+  color: var(--grey-700);
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
